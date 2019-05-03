@@ -15,7 +15,6 @@ header.home {
 .title {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 150px;
   .left, .right {
     width: 46%;
   }
@@ -23,11 +22,13 @@ header.home {
     transform: translate($wrapper, 100px)
   }
 }
+section {
+  padding: 150px 0;
+}
 .features {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  padding-bottom: 100px;
   .feature {
     flex-basis: 45%;
     display: flex;
@@ -48,6 +49,7 @@ header.home {
 }
 
 .quadrant {
+  padding: 0;
   background: $purple;
   .wrapper {
     display: flex;
@@ -57,11 +59,78 @@ header.home {
       flex: 0 1 50%;
       }
     }
+  img {
+    display: block;
+  }
   .image1 {
-    transform: translate(-$wrapper, -$wrapper);
+    transform: translate(-$wrapper, -30px);
+    img {
+      box-shadow: 15px 15px $aqua;
+    }
   }
   .image2 {
-    transform: translate($wrapper, $wrapper);
+    transform: translate($wrapper, 30px);
     order: 1;
+    img {
+      box-shadow: -15px 15px $aqua;
+    }
+  }
+  .text1 {
+    padding-left: $wrapper;
+  }
+  .text2 {
+    padding-right: $wrapper;
+    text-align: right;
+  }
+}
+.one-column {
+  padding: 150px 0;
+  text-align: center;
+  h2, p, button {
+    max-width: 1000px;
+    margin: 20px auto;
+  }
+}
+.divider {
+  height: 400px;
+  background-image: url('../images/banner.jpg')
+}
+.events {
+  .wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+  h2 {
+    margin: 0;
+  }
+  .left {
+    flex: 1 1 300;
+    margin: 0 10% 0 15px;
+    img {
+      box-shadow: 15px 15px $aqua;
+    }
+  }
+  .right {
+    flex: 1 1 66.6%;
+  }
+}
+.gallery {
+  background: $purple;
+  .wrapper {
+    display: flex;
+  }
+  img {
+    margin-right: 20px;
+    &:last-of-type {
+      margin: 0;
+    }
+  }
+}
+footer {
+  background: $navy;
+  p {
+    margin: 0;
+    padding: 10px;
+    text-align: center;
   }
 }
