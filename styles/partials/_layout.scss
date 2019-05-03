@@ -1,22 +1,25 @@
 .wrapper {
   width: 90%;
-  max-width: 1280px;
+  max-width: 1440px;
   margin: 0 auto;
 }
-.full-width {
-  width: 100%;
-  max-width: 1420px;
-  margin: 0 auto;
+header {
+  height: 100vh;
+  max-height: 580px;
+  min-height: 300px;
 }
+
+// Home Page 
 header.home {
   background: url('../images/home-header.jpg') 50% 50% / cover;
   max-height: 700px;
+  min-height: 500px;
 }
 .title {
   display: flex;
   justify-content: space-between;
   .left, .right {
-    width: 46%;
+    flex: 1 1 500px;
   }
   img {
     transform: translate($wrapper, 100px)
@@ -25,13 +28,15 @@ header.home {
 section {
   padding: 150px 0;
 }
-.features {
+.outer-flex {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  margin: 0 -20px;
   .feature {
-    flex-basis: 45%;
+    flex: 1 1 500px;
     display: flex;
+    padding: 20px;
   }
   i {
     display: inline-block;
@@ -56,7 +61,7 @@ section {
     flex-wrap: wrap;
     justify-content: space-between;
     div {
-      flex: 0 1 50%;
+      flex: 1 1 500px;
       }
     }
   img {
@@ -71,6 +76,7 @@ section {
   .image2 {
     transform: translate($wrapper, 30px);
     order: 1;
+    align-self: flex-end;
     img {
       box-shadow: -15px 15px $aqua;
     }
@@ -93,25 +99,26 @@ section {
 }
 .divider {
   height: 400px;
-  background-image: url('../images/banner.jpg')
+  background: url('../images/banner.jpg') 50% 50% / cover; 
 }
 .events {
   .wrapper {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
   }
   h2 {
     margin: 0;
   }
   .left {
-    flex: 1 1 300;
-    margin: 0 10% 0 15px;
+    flex: 1 0 100;
+    margin-right: 10%;
     img {
       box-shadow: 15px 15px $aqua;
     }
   }
   .right {
-    flex: 1 1 66.6%;
+    flex: 1 1 300px;
   }
 }
 .gallery {
@@ -133,4 +140,10 @@ footer {
     padding: 10px;
     text-align: center;
   }
+}
+
+
+// Begin blog section
+header.blog {
+  background: url('../images/blog-header.jpg') 50% 50% / cover;
 }
