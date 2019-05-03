@@ -1,5 +1,5 @@
 .wrapper {
-  width: 90%;
+  width: calc(100% - #{$wrapper}) ;
   max-width: 1440px;
   margin: 0 auto;
 }
@@ -9,20 +9,22 @@ header {
   min-height: 300px;
 }
 
-// Home Page 
+// Home Page
 header.home {
-  background: url('../images/home-header.jpg') 50% 50% / cover;
+  background: url("../images/home-header.jpg") 50% 50% / cover;
   max-height: 700px;
   min-height: 500px;
 }
 .title {
   display: flex;
   justify-content: space-between;
-  .left, .right {
+
+  .left,
+  .right {
     flex: 1 1 500px;
   }
   img {
-    transform: translate($wrapper, 100px)
+    transform: translate($wrapper, 100px);
   }
 }
 section {
@@ -33,11 +35,13 @@ section {
   justify-content: space-between;
   flex-wrap: wrap;
   margin: 0 -20px;
+
   .feature {
     flex: 1 1 500px;
     display: flex;
     padding: 20px;
   }
+
   i {
     display: inline-block;
     background-color: $aqua;
@@ -50,29 +54,37 @@ section {
     color: $purple;
     margin-right: 20px;
   }
-  h2 { margin-top: 0}
+
+  h2 {
+    margin-top: 0;
+  }
 }
 
 .quadrant {
   padding: 0;
   background: $purple;
+
   .wrapper {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+
     div {
       flex: 1 1 500px;
-      }
     }
+  }
   img {
     display: block;
   }
+
   .image1 {
     transform: translate(-$wrapper, -30px);
+
     img {
       box-shadow: 15px 15px $aqua;
     }
   }
+
   .image2 {
     transform: translate($wrapper, 30px);
     order: 1;
@@ -84,6 +96,7 @@ section {
   .text1 {
     padding-left: $wrapper;
   }
+
   .text2 {
     padding-right: $wrapper;
     text-align: right;
@@ -92,14 +105,17 @@ section {
 .one-column {
   padding: 150px 0;
   text-align: center;
-  h2, p, button {
+
+  h2,
+  p,
+  button {
     max-width: 1000px;
     margin: 20px auto;
   }
 }
 .divider {
   height: 400px;
-  background: url('../images/banner.jpg') 50% 50% / cover; 
+  background: url("../images/banner.jpg") 50% 50% / cover;
 }
 .events {
   .wrapper {
@@ -107,25 +123,31 @@ section {
     flex-wrap: wrap;
     justify-content: space-between;
   }
+
   h2 {
     margin: 0;
   }
+
   .left {
     flex: 1 0 100;
     margin-right: 10%;
+
     img {
       box-shadow: 15px 15px $aqua;
     }
   }
+
   .right {
     flex: 1 1 300px;
   }
 }
 .gallery {
   background: $purple;
+
   .wrapper {
     display: flex;
   }
+
   img {
     margin-right: 20px;
     &:last-of-type {
@@ -133,8 +155,10 @@ section {
     }
   }
 }
+
 footer {
   background: $navy;
+
   p {
     margin: 0;
     padding: 10px;
@@ -142,8 +166,29 @@ footer {
   }
 }
 
-
 // Begin blog section
-header.blog {
-  background: url('../images/blog-header.jpg') 50% 50% / cover;
+.blog {
+  header {
+    background: url("../images/blog-header.jpg") 50% 50% / cover;
+  }
+  .blog-main { 
+    display: flex;
+    align-items: flex-start;
+  }
+  aside {
+    flex: 0 1 450px;
+    background: $purple;
+    margin-right: $wrapper;
+    
+    img {
+      transform: translate(calc(-20px - #{$wrapper}), -20px);
+      width: calc(100% + #{$wrapper})
+    }
+    div {
+      padding: 20px;
+    }
+  }
+  article {
+    flex: 0 1 calc(1440px - (#{$wrapper} + 450px));
+  }
 }

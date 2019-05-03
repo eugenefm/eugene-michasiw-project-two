@@ -227,6 +227,10 @@ button {
   padding: 5px 20px;
 }
 
+button:hover {
+  background-color: #02d0c3;
+}
+
 img {
   width: 100%;
   display: block;
@@ -281,7 +285,7 @@ nav li.current-page:hover::after {
 }
 
 .wrapper {
-  width: 90%;
+  width: calc(100% - 30px);
   max-width: 1440px;
   margin: 0 auto;
 }
@@ -307,15 +311,16 @@ header.home {
           justify-content: space-between;
 }
 
-.title .left, .title .right {
+.title .left,
+.title .right {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 500px;
           flex: 1 1 500px;
 }
 
 .title img {
-  -webkit-transform: translate(5vw, 100px);
-          transform: translate(5vw, 100px);
+  -webkit-transform: translate(30px, 100px);
+          transform: translate(30px, 100px);
 }
 
 section {
@@ -390,8 +395,8 @@ section {
 }
 
 .quadrant .image1 {
-  -webkit-transform: translate(-5vw, -30px);
-          transform: translate(-5vw, -30px);
+  -webkit-transform: translate(-30px, -30px);
+          transform: translate(-30px, -30px);
 }
 
 .quadrant .image1 img {
@@ -400,8 +405,8 @@ section {
 }
 
 .quadrant .image2 {
-  -webkit-transform: translate(5vw, 30px);
-          transform: translate(5vw, 30px);
+  -webkit-transform: translate(30px, 30px);
+          transform: translate(30px, 30px);
   -webkit-box-ordinal-group: 2;
       -ms-flex-order: 1;
           order: 1;
@@ -415,11 +420,11 @@ section {
 }
 
 .quadrant .text1 {
-  padding-left: 5vw;
+  padding-left: 30px;
 }
 
 .quadrant .text2 {
-  padding-right: 5vw;
+  padding-right: 30px;
   text-align: right;
 }
 
@@ -428,7 +433,9 @@ section {
   text-align: center;
 }
 
-.one-column h2, .one-column p, .one-column button {
+.one-column h2,
+.one-column p,
+.one-column button {
   max-width: 1000px;
   margin: 20px auto;
 }
@@ -499,7 +506,40 @@ footer p {
   text-align: center;
 }
 
-header.blog {
+.blog header {
   background: url("../images/blog-header.jpg") 50% 50%/cover;
+}
+
+.blog .blog-main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.blog aside {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 450px;
+          flex: 0 1 450px;
+  background: #474bb5;
+  margin-right: 30px;
+}
+
+.blog aside img {
+  -webkit-transform: translate(calc(-20px - 30px), -20px);
+          transform: translate(calc(-20px - 30px), -20px);
+  width: calc(100% + 30px);
+}
+
+.blog aside div {
+  padding: 20px;
+}
+
+.blog article {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 calc(1440px - (30px + 450px));
+          flex: 0 1 calc(1440px - (30px + 450px));
 }
 /*# sourceMappingURL=styles.css.map */
