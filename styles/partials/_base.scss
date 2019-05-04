@@ -6,7 +6,7 @@ article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary
 
 .visually-hidden:not(:focus):not(:active) { position: absolute; width: 1px; height: 1px; margin: -1px;border: 0;padding: 0;white-space: nowrap;clip-path: inset(100%);clip: rect(00 0 0);overflow: hidden;}
 
-$heading-font: 'Walter Turncoat', cursive;
+$heading-font: 'Walter Turncoat', 'Comic Sans', cursive;
 $body-font: 'Roboto', sans-serif;
 
 $purple: #474bb5;
@@ -16,7 +16,7 @@ $aqua: #08fded;
 $grey: #f3faff;
 $white: #fff;
 
-$wrapper: 30px;
+$wrapper: 5vw;
 
 // Pierre Burel's Pixel to REM converter: https://github.com/pierreburel/sass-rem
 $rem-baseline: 20px !default;

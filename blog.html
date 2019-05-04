@@ -6,6 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="styles/styles.css">
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,700|Walter+Turncoat" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
   <title>FunPlace | Blog</title>
 </head>
 <body class="blog">
@@ -14,24 +16,23 @@
       <nav>
         <ul>
           <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
+          <li><a href="index.html#about">About</a></li>
           <li class="current-page"><a href="blog.html">Blog</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
       <div class="title">
           <h1>Blog</h1>
-        <div class="right">
       </div>
     </div>
   </header>
   <main>
-    <div class="wrapper blog-main">
+    <div class="main-blog">
       <aside>
         <img src="images/blog-side-image.jpg" alt="Kids playing with crayons.">
         <div>
           <h4>Our Mission</h4>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi aut cumque ut?</p>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem sit praesentium saepe deleniti qui incidunt placeat blanditiis eaque!</p>
           <h4>Recent Posts</h4>
           <ul>
             <li>Lorem ipsum dolor sit.</li>
@@ -45,38 +46,39 @@
         <img src="images/blog-post-imag.jpg" alt="A small child being attacked by a bubble.">
         <div>
           <h2>New Activities</h2>
-          <h4>Monday January 30, 2019 by Saron</h4>
+          <h5>Monday January 30, 2019 by Saron</h5>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, expedita eveniet id repellendus, incidunt debitis quam vero iste, cumque ipsa modi illum rerum corporis odio eius tempore magni perspiciatis ipsam.</p>
-          <p>A ratione officia obcaecati eligendi porro distinctio in saepe totam, iusto possimus autem delectus quibusdam sunt qui incidunt excepturi nostrum, sed aliquam nisi aperiam quae soluta vitae ipsam nulla! Unde.</p>
-          <p>Voluptate minus et architecto accusamus dolorem sapiente aut, voluptatem delectus libero hic pariatur cumque culpa sed quasi repellendus veniam sunt nisi ipsa sequi iusto voluptas tempora suscipit fuga! Eveniet, perferendis.</p>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi nemo rem porro molestias, in fugit vitae quae deleniti, quasi beatae distinctio et quis accusantium quod! Possimus sed fuga, quidem cum aliquam excepturi impedit quibusdam nesciunt consequatur ducimus dolorem tempora repellat.</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit sapiente ducimus placeat, earum eaque doloremque repellendus explicabo tenetur ipsum rerum, at assumenda odit tempore illum nisi sunt labore alias! Commodi totam recusandae doloremque perferendis, dolorem quos earum itaque debitis, nemo asperiores porro nulla, illum sint minus rem odio officia esse?</p>
           <p>Quidem alias, iure dolor quia nam ratione delectus minima dolorem reiciendis, cupiditate ea asperiores at et harum ullam, inventore excepturi nostrum vitae tenetur laborum aut libero blanditiis iste. Quas, consequuntur.</p>
         </div>
       </article>
-    </div>
-    <div class="comments">
-      <div class="comment">
-        <img src="images/comment-1.jpg" alt="Mariama.">
-        <div>
-          <h4></h4>
-          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam ratione necessitatibus mollitia provident ea doloremque deleniti? Unde distinctio iste tempora.</p>
+      <div class="comments">
+        <h2>Comments:</h2>
+        <div class="comment">
+          <img src="images/comment-1.jpg" alt="Mariama.">
+          <div>
+            <h5>Tuesday October 9th, 2019 by Mariama</h5>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, obcaecati quod. Ad tempore dignissimos sint voluptatem quidem, totam quas minima blanditiis maiores, eveniet veniam. Provident veritatis delectus quidem, dolores doloribus perferendis facere, excepturi dolorem maiores vero placeat facilis minima aut!</p>
+          </div>
         </div>
-      </div>
-      <div class="comment">
-        <img src="images/comment-2.jpg" alt="Rob.">
-        <div>
-          <h4></h4>
-          <p>Libero eligendi illo incidunt eum rerum. Eaque dolores blanditiis deleniti tempora quis odit commodi fugit veritatis, amet non. Accusantium, id!</p>
+        <div class="comment">
+          <img src="images/comment-2.jpg" alt="Rob.">
+          <div>
+            <h5>Wednesday October 10th, 2019 by Rob</h5>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus ipsa perferendis, illo delectus sed at esse! Officia blanditiis delectus repudiandae similique, numquam id quasi natus.</p>
+          </div>
         </div>
+        <form action="">
+          <input type="text" name="name" id="name" placeholder="Name">
+          <label for="name" class="visually-hidden">Name</label>
+          <input type="email" name="email" id="email" placeholder="Email address">
+          <label for="email" class="visually-hidden">Email Address</label>
+          <textarea name="comment" id="comment" cols="30" rows="10" placeholder="Comment"></textarea>
+          <label for="comment" class="visually-hidden">Comment</label>
+          <button>Post Comment</button>
+        </form>
       </div>
-      <form action="">
-        <input type="text" name="name" id="name" placeholder="Name">
-        <label for="name" class="visuallyHidden">Name</label>
-        <input type="email" name="email" id="email" placeholder="Email address">
-        <label for="email" class="visuallyHidden">Email Address</label>
-        <textarea name="comment" id="comment" cols="30" rows="10" placeholder="Comment"></textarea>
-        <label for="comment" class="visuallyHidden">Comment</label>
-        <button>Post Comment</button>
-      </form>
     </div>
   </main>
   <footer>

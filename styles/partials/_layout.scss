@@ -1,5 +1,5 @@
 .wrapper {
-  width: calc(100% - #{$wrapper});
+  width: calc(100% - 2 * #{$wrapper});
   max-width: 1440px;
   margin: 0 auto;
 }
@@ -11,7 +11,7 @@ header {
 
 // Home Page
 header.home {
-  background: url("../images/home-header.jpg") 50% 50% / cover;
+  background: url("./../images/home-header.jpg") 50% 50% / cover;
   max-height: 700px;
   min-height: 500px;
 }
@@ -68,6 +68,7 @@ section {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    align-items: center;
 
     div {
       flex: 1 1 500px;
@@ -115,7 +116,7 @@ section {
 }
 .divider {
   height: 400px;
-  background: url("../images/banner.jpg") 50% 50% / cover;
+  background: url("./../images/banner.jpg") 50% 50% / cover;
 }
 .events {
   .wrapper {
@@ -166,29 +167,110 @@ footer {
   }
 }
 
+// Two column page layouts
+
+.main-contact, .main-blog {
+  display: flex;
+  align-items: flex-start;
+  margin: -200px auto 0;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+aside {
+  flex: 1 1 30%;
+  margin-top: 300px;
+}
+
+article, .contact {
+  flex: 2 1 65%;
+}
+
 // Begin blog section
 .blog {
   header {
-    background: url("../images/blog-header.jpg") 50% 50% / cover;
+    background: url("./../images/blog-header.jpg") 50% 50% / cover;
   }
-  .blog-main { 
-    display: flex;
-    align-items: flex-start;
+  .main-blog {
+    max-width: 1600px;;
   }
   aside {
-    flex: 0 1 450px;
-    background: $purple;
-    margin-right: $wrapper;
-    
+    margin-right: 5%;
+
     img {
-      transform: translate(calc(-20px - #{$wrapper}), -20px);
-      width: calc(100% + #{$wrapper})
+    box-shadow: 40px 20px 0 -20px $purple;
+    width: calc(100% - 20px)
     }
     div {
       padding: 20px;
+      background: $purple;
+      margin-left: $wrapper;
+    }
+    h4 {
+      margin-top: 2rem;
     }
   }
   article {
-    flex: 0 1 calc(1440px - (#{$wrapper} + 450px));
+    img {
+      box-shadow: -20px 20px $aqua;
+      width: calc(100% - 20px);
+      margin-left: auto;
+    }
+
+    div {
+    border: 5px solid $aqua;
+    width: calc(100% - 20px);
+    padding: $wrapper;
+    }
+  }
+  .comments {
+    flex: 0 1 65%;
+
+    h2 {
+      margin: 50px $wrapper 20px;
+    }
+  }
+  .comment { 
+    display: flex;
+    align-items: flex-start;
+    margin: 0 $wrapper 50px;
+
+    img {
+      flex: 0 0 90px;
+      padding-right: 20px;
+    }
+  }
+  form {
+    margin-bottom: 100px;
+  }
+}
+
+// Contact Page
+.contact {
+  header {
+    background: url("./../images/contact-header.jpg") 50% 50% / cover;
+  }
+  section {
+    padding: 40px 20px;
+    background: $purple;
+    flex: 1 1 calc(65% - 20px);
+    box-shadow: 20px 20px $aqua;
+    margin-bottom: 100px;
+    transform: translate(calc(#{$wrapper} - 20px));
+  }
+  
+}
+
+// responsive style 
+
+@media only screen and (max-width: 1440px) {
+  .blog {
+    article {
+      div {
+          border-right: none;
+          border-top: none;
+          width: 100%;
+      }
+    }
   }
 }

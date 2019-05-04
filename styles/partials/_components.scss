@@ -4,9 +4,14 @@ html {
 body {
   background: $green;
 }
+h1, h2, h3, h4, h5 {
+  color: $white;
+  margin: 0;
+}
+
 h1, h2, h3, h4 {
   font-family: $heading-font;
-  color: $white;
+  font-weight: normal;
 }
 
 p, a {
@@ -17,7 +22,12 @@ p, a {
   text-decoration: none;
 }
 
+.address p {
+  margin: 0;
+}
+
 h1 {
+  margin-top: 2rem;
   font-size: rem(121.5px);
 }
 
@@ -33,6 +43,11 @@ h2 {
 h3 {
   font-size: rem(45px);
 }
+
+h5 {
+  font-family: $body-font;
+  font-size: rem(20px);
+}
 button {
   font-family: $heading-font;
   background-color: $aqua;
@@ -44,6 +59,37 @@ button {
 
   &:hover {
     background-color: darken( $aqua, 10% )
+  }
+}
+
+form {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+
+  input {
+      flex: 1 1 300px;
+      margin: 20px 45px;
+      height: 65px;
+      background: none;
+      color: $white;
+      padding: 5px 40px;
+      border: none;
+      border-bottom: 3px solid $aqua;
+    }
+    textarea, button {
+      flex-basis: 100%;
+      margin: 20px 45px;
+    }
+    textarea {
+      background: none;
+      color: $white;
+      padding: 20px;
+      border: 3px solid $aqua;;
+    }
+  ::placeholder {
+    color: $white;
+    opacity: 1;
   }
 }
 
@@ -83,6 +129,43 @@ nav {
       &:hover::after {
         transform: scaleX(1.2);
       }
+    }
+  }
+}
+main {
+  ul {
+  list-style: none; /* Remove default bullets */
+  color: $white;
+  margin: 0;
+  padding-left: 1rem;
+
+    li {
+      margin: 0;
+      padding: .2rem;
+    }
+
+    li::before {
+    content: "\2022"; 
+    color: $aqua;
+    display: inline-block;
+    margin-left: -1rem;
+    width: 1rem;
+    }
+  }
+  .social {
+    display: flex;
+    padding: 0;
+    
+    i {
+      font-size: 1.5rem;
+    }
+
+    li {
+      margin-right: 1rem;
+    }
+    
+    li::before {
+    display: none;
     }
   }
 }
