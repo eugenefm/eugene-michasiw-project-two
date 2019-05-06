@@ -4,20 +4,22 @@
   margin: 0 auto;
 }
 header {
-  height: 100vh;
-  max-height: 580px;
-  min-height: 300px;
+  max-height: 600px;
+  min-height: 500px;
+  height: 70vh;
 }
 
 // Home Page
 header.home {
   background: url("./../images/home-header.jpg") 50% 50% / cover;
   max-height: 700px;
-  min-height: 500px;
+  height: auto;
 }
 .title {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
 
   .left,
   .right {
@@ -53,6 +55,7 @@ section {
     height: 50px;
     color: $purple;
     margin-right: 20px;
+    width: 50px;
   }
 
   h2 {
@@ -82,7 +85,7 @@ section {
     transform: translate(-$wrapper, -30px);
 
     img {
-      box-shadow: 15px 15px $aqua;
+      box-shadow: 20px 20px $aqua;
     }
   }
 
@@ -91,7 +94,7 @@ section {
     order: 1;
     align-self: flex-end;
     img {
-      box-shadow: -15px 15px $aqua;
+      box-shadow: -20px 20px $aqua;
     }
   }
   .text1 {
@@ -104,7 +107,6 @@ section {
   }
 }
 .one-column {
-  padding: 150px 0;
   text-align: center;
 
   h2,
@@ -130,16 +132,18 @@ section {
   }
 
   .left {
-    flex: 1 0 100;
+    flex: 1 1 333px;
+    max-width: 500px;
     margin-right: 10%;
+    margin-bottom: 50px;
 
     img {
-      box-shadow: 15px 15px $aqua;
+      box-shadow: 20px 20px $aqua;
     }
   }
 
   .right {
-    flex: 1 1 300px;
+    flex: 2 1 667px;
   }
 }
 .gallery {
@@ -178,12 +182,12 @@ footer {
 }
 
 aside {
-  flex: 1 1 30%;
+  flex: 1 1 350px;
   margin-top: 300px;
 }
 
 article, .contact {
-  flex: 2 1 65%;
+  flex: 2 1 650px;
 }
 
 // Begin blog section
@@ -262,8 +266,12 @@ article, .contact {
 }
 
 // responsive style 
-
 @media only screen and (max-width: 1440px) {
+  .home {
+    h1 {
+      font-size: 10vw;
+    }
+  }
   .blog {
     article {
       div {
@@ -272,5 +280,129 @@ article, .contact {
           width: 100%;
       }
     }
+  }
+}
+@media only screen and (max-width: 1110px) {
+  img {
+    width: calc(100% - 20px);
+    margin: 0 auto;
+  }
+  .home {
+    h1 {
+      font-size: 15vw;
+      text-align: center;
+    }
+    .right {
+      flex-basis: 100%;
+
+      img {
+        width: 80%;
+        margin: 0 auto;
+        transform: translate(0, 40px);
+        max-width: 500px;
+      }
+    }
+  }
+  .features {
+    padding: 150px 0;
+  }
+  .quadrant {
+    .image1 {
+      transform: translate( -10px , -$wrapper);
+      margin: 0 auto;
+    }
+    .image2 {
+      transform: translate(10px , $wrapper);
+      margin: 0 auto;
+    }
+    img {
+      margin: 0 auto;
+      max-width: 500px;
+    }
+    .text1, .text2 {
+      padding: 20px 0;
+      text-align: center;
+
+    }
+  }
+  section {
+    padding: 75px 0;
+  }
+  .events {
+
+    .left {
+      margin-right: 0;
+      transform: translateX(-10px);
+    }
+  }
+  .gallery {
+    img:nth-of-type(2) {
+      margin: 0;
+    }
+    img:nth-of-type(3) {
+      display: none;
+    }
+  }
+  .main-contact, .main-blog {
+    flex-direction: column;
+
+    aside {
+      order: 1;
+    }
+  }
+  .blog {
+    article {
+      width: 90%;
+      margin: 0 auto;
+
+      img {
+        margin: 0 auto;
+        max-width: 500px;
+        transform: translateX(10px);
+      }
+      div {
+        border: 5px solid $aqua;
+        padding-top: 100px;
+        margin-top: -50px;
+      }
+    }
+    aside {
+      background: $purple;
+      width: 90%;
+      margin: 0 auto;
+      margin-bottom: 100px;
+
+        img {
+          max-width: 500px;
+          width: 100%;
+          padding: 20px;
+          box-shadow: none;
+        }
+        div {
+          margin: 0;
+        }
+    }
+  }
+}
+@media only screen and (max-width: 500px) {
+  h2, h3 {
+    font-size: rem(30px);
+  }
+  p {
+    font-size: 18px;
+  }
+  .features {
+    padding: 75px 0;
+
+    .feature {
+      flex-direction: column;
+
+      i {
+        margin-bottom: 10px;
+      }
+    }
+  }
+  .outer-flex {
+    margin: 0;
   }
 }
