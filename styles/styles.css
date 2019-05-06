@@ -255,7 +255,7 @@ form {
           align-items: flex-start;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin: 0 calc(5vw - 20px);
+  margin: 0 calc(80px - 20px);
 }
 
 form input {
@@ -446,8 +446,8 @@ header.home {
 }
 
 .title img {
-  -webkit-transform: translate(5vw, 100px);
-          transform: translate(5vw, 100px);
+  -webkit-transform: translate(80px, 100px);
+          transform: translate(80px, 100px);
 }
 
 section {
@@ -526,8 +526,8 @@ section {
 }
 
 .quadrant .image1 {
-  -webkit-transform: translate(-5vw, -30px);
-          transform: translate(-5vw, -30px);
+  -webkit-transform: translate(-80px, -30px);
+          transform: translate(-80px, -30px);
 }
 
 .quadrant .image1 img {
@@ -536,8 +536,8 @@ section {
 }
 
 .quadrant .image2 {
-  -webkit-transform: translate(5vw, 30px);
-          transform: translate(5vw, 30px);
+  -webkit-transform: translate(80px, 30px);
+          transform: translate(80px, 30px);
   -webkit-box-ordinal-group: 2;
       -ms-flex-order: 1;
           order: 1;
@@ -551,11 +551,11 @@ section {
 }
 
 .quadrant .text1 {
-  padding-left: 5vw;
+  padding-left: 80px;
 }
 
 .quadrant .text2 {
-  padding-right: 5vw;
+  padding-right: 80px;
   text-align: right;
 }
 
@@ -690,7 +690,7 @@ article, .contact {
 .blog aside div {
   padding: 20px;
   background: #474bb5;
-  margin-left: 5vw;
+  margin-left: 80px;
 }
 
 .blog aside h4 {
@@ -707,7 +707,7 @@ article, .contact {
 .blog article div {
   border: 5px solid #08fded;
   width: calc(100% - 20px);
-  padding: 5vw;
+  padding: 80px;
 }
 
 .blog .comments {
@@ -717,7 +717,7 @@ article, .contact {
 }
 
 .blog .comments h2 {
-  margin: 50px 5vw 20px;
+  margin: 50px 80px 20px;
 }
 
 .blog .comment {
@@ -727,7 +727,7 @@ article, .contact {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  margin: 0 5vw 50px;
+  margin: 0 80px 50px;
 }
 
 .blog .comment img {
@@ -754,15 +754,15 @@ article, .contact {
   -webkit-box-shadow: 20px 20px #08fded;
           box-shadow: 20px 20px #08fded;
   margin-bottom: 100px;
-  -webkit-transform: translate(calc(5vw - 20px));
-          transform: translate(calc(5vw - 20px));
+  -webkit-transform: translate(calc(80px - 20px));
+          transform: translate(calc(80px - 20px));
 }
 
 .contact form input, .contact form textarea {
   border-color: #fff;
 }
 
-@media only screen and (max-width: 1440px) {
+@media only screen and (max-width: 1600px) {
   .home h1 {
     font-size: 10vw;
   }
@@ -770,6 +770,43 @@ article, .contact {
     border-right: none;
     border-top: none;
     width: 100%;
+  }
+  .title img {
+    -webkit-transform: translate(5vw, 100px);
+            transform: translate(5vw, 100px);
+  }
+  .quadrant .image1 {
+    -webkit-transform: translate(-5vw, -30px);
+            transform: translate(-5vw, -30px);
+  }
+  .quadrant .image2 {
+    -webkit-transform: translate(5vw, 30px);
+            transform: translate(5vw, 30px);
+  }
+  .quadrant .text1 {
+    padding-left: 5vw;
+  }
+  .quadrant .text2 {
+    padding-right: 5vw;
+  }
+  .blog aside div {
+    margin-left: 5vw;
+  }
+  .blog article div {
+    padding: 5vw;
+  }
+  .comments h2 {
+    margin: 50px 5vw 20px;
+  }
+  .comment {
+    margin: 0 5vw 50px;
+  }
+  .contact section {
+    -webkit-transform: translate(calc(5vw - 20px));
+            transform: translate(calc(5vw - 20px));
+  }
+  form {
+    margin: 0 calc(5vw - 20px);
   }
 }
 

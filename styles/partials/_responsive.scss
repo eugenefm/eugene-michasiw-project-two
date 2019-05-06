@@ -1,5 +1,5 @@
-// responsive style 
-@media only screen and (max-width: 1440px) {
+
+@media only screen and (max-width: 1600px) {
   .home {
     h1 {
       font-size: 10vw;
@@ -13,6 +13,50 @@
           width: 100%;
       }
     }
+  }
+  .title {
+    img {
+      transform: translate($wrapper, 100px);
+    }
+  }
+  .quadrant {
+    
+    .image1 {
+    transform: translate(-$wrapper, -30px);
+    }
+
+    .image2 {
+    transform: translate($wrapper, 30px);
+    }
+    .text1 {
+      padding-left: $wrapper;
+    }
+
+    .text2 {
+      padding-right: $wrapper;
+    }
+  }
+  .blog {
+    aside div {
+    margin-left: $wrapper;
+    }
+    article div {
+      padding: $wrapper;
+    }
+  }
+  .comments h2 { 
+      margin: 50px $wrapper 20px;
+  }
+  .comment {
+      margin: 0 $wrapper 50px;
+  }
+  .contact {
+    section {
+      transform: translate(calc(#{$wrapper} - 20px));
+    }
+  }
+  form {
+    margin: 0 calc(#{$wrapper} - 20px);
   }
 }
 @media only screen and (max-width: 1110px) {

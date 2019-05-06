@@ -31,7 +31,7 @@ header.home {
     flex: 1 1 500px;
   }
   img {
-    transform: translate($wrapper, 100px);
+    transform: translate($max-wrapper, 100px);
   }
 }
 section {
@@ -87,7 +87,7 @@ section {
   }
 
   .image1 {
-    transform: translate(-$wrapper, -30px);
+    transform: translate(-$max-wrapper, -30px);
 
     img {
       box-shadow: 20px 20px $aqua;
@@ -95,7 +95,7 @@ section {
   }
 
   .image2 {
-    transform: translate($wrapper, 30px);
+    transform: translate($max-wrapper, 30px);
     order: 1;
     align-self: flex-end;
     img {
@@ -103,11 +103,11 @@ section {
     }
   }
   .text1 {
-    padding-left: $wrapper;
+    padding-left: $max-wrapper;
   }
 
   .text2 {
-    padding-right: $wrapper;
+    padding-right: $max-wrapper;
     text-align: right;
   }
 }
@@ -215,7 +215,7 @@ article, .contact {
     div {
       padding: 20px;
       background: $purple;
-      margin-left: $wrapper;
+      margin-left: $max-wrapper;
     }
     h4 {
       margin-top: 2rem;
@@ -231,20 +231,20 @@ article, .contact {
     div {
     border: 5px solid $aqua;
     width: calc(100% - 20px);
-    padding: $wrapper;
+    padding: $max-wrapper;
     }
   }
   .comments {
     flex: 0 1 65%;
 
     h2 {
-      margin: 50px $wrapper 20px;
+      margin: 50px $max-wrapper 20px;
     }
   }
   .comment { 
     display: flex;
     align-items: flex-start;
-    margin: 0 $wrapper 50px;
+    margin: 0 $max-wrapper 50px;
 
     img {
       flex: 0 0 90px;
@@ -267,7 +267,7 @@ article, .contact {
     flex: 1 1 calc(65% - 20px);
     box-shadow: 20px 20px $aqua;
     margin-bottom: 100px;
-    transform: translate(calc(#{$wrapper} - 20px));
+    transform: translate(calc(#{$max-wrapper} - 20px));
   }
   form {
     input, textarea {
