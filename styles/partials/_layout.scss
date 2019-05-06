@@ -5,7 +5,7 @@
 }
 header {
   max-height: 600px;
-  min-height: 350px;
+  min-height: 500px;
   height: 70vh;
 }
 .menu input, 
@@ -159,6 +159,7 @@ section {
 
     div {
       margin-right: 20px;
+      flex: 1 1 33.3%;
 
       &:last-of-type {
         margin: 0;
