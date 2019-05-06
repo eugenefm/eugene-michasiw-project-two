@@ -5,8 +5,13 @@
 }
 header {
   max-height: 600px;
-  min-height: 500px;
+  min-height: 350px;
   height: 70vh;
+}
+.menu input, 
+.menu label, 
+.menu span {
+  display: none;
 }
 
 // Home Page
@@ -262,147 +267,10 @@ article, .contact {
     margin-bottom: 100px;
     transform: translate(calc(#{$wrapper} - 20px));
   }
+  form {
+    input, textarea {
+      border-color: #fff;
+    }
+  }
   
-}
-
-// responsive style 
-@media only screen and (max-width: 1440px) {
-  .home {
-    h1 {
-      font-size: 10vw;
-    }
-  }
-  .blog {
-    article {
-      div {
-          border-right: none;
-          border-top: none;
-          width: 100%;
-      }
-    }
-  }
-}
-@media only screen and (max-width: 1110px) {
-  img {
-    width: calc(100% - 20px);
-    margin: 0 auto;
-  }
-  .home {
-    h1 {
-      font-size: 15vw;
-      text-align: center;
-    }
-    .right {
-      flex-basis: 100%;
-
-      img {
-        width: 80%;
-        margin: 0 auto;
-        transform: translate(0, 40px);
-        max-width: 500px;
-      }
-    }
-  }
-  .features {
-    padding: 150px 0;
-  }
-  .quadrant {
-    .image1 {
-      transform: translate( -10px , -$wrapper);
-      margin: 0 auto;
-    }
-    .image2 {
-      transform: translate(10px , $wrapper);
-      margin: 0 auto;
-    }
-    img {
-      margin: 0 auto;
-      max-width: 500px;
-    }
-    .text1, .text2 {
-      padding: 20px 0;
-      text-align: center;
-
-    }
-  }
-  section {
-    padding: 75px 0;
-  }
-  .events {
-
-    .left {
-      margin-right: 0;
-      transform: translateX(-10px);
-    }
-  }
-  .gallery {
-    img:nth-of-type(2) {
-      margin: 0;
-    }
-    img:nth-of-type(3) {
-      display: none;
-    }
-  }
-  .main-contact, .main-blog {
-    flex-direction: column;
-
-    aside {
-      order: 1;
-    }
-  }
-  .blog {
-    article {
-      width: 90%;
-      margin: 0 auto;
-
-      img {
-        margin: 0 auto;
-        max-width: 500px;
-        transform: translateX(10px);
-      }
-      div {
-        border: 5px solid $aqua;
-        padding-top: 100px;
-        margin-top: -50px;
-      }
-    }
-    aside {
-      background: $purple;
-      width: 90%;
-      margin: 0 auto;
-      margin-bottom: 100px;
-
-        img {
-          max-width: 500px;
-          width: 100%;
-          padding: 20px;
-          box-shadow: none;
-        }
-        div {
-          margin: 0;
-        }
-    }
-  }
-}
-@media only screen and (max-width: 500px) {
-  h2, h3 {
-    font-size: rem(30px);
-  }
-  p {
-    font-size: 18px;
-  }
-  .features {
-    padding: 75px 0;
-
-    .feature {
-      flex-direction: column;
-
-      i {
-        margin-bottom: 10px;
-      }
-    }
-  }
-  .outer-flex {
-    margin: 0;
-  }
 }
