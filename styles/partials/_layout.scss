@@ -156,12 +156,13 @@ section {
 
   .wrapper {
     display: flex;
-  }
 
-  img {
-    margin-right: 20px;
-    &:last-of-type {
-      margin: 0;
+    div {
+      margin-right: 20px;
+
+      &:last-of-type {
+        margin: 0;
+      }
     }
   }
 }
