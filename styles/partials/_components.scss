@@ -197,7 +197,7 @@ nav {
         transform: scaleX(1);
       }
 
-      &:hover::after
+      &:hover::after,
       &:focus::after {
         transform: scaleX(1.2);
       }

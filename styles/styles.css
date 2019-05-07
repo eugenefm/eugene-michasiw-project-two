@@ -402,7 +402,7 @@ nav a.current-page::after {
           transform: scaleX(1);
 }
 
-nav a.current-page:hover::after nav a.current-page:focus::after {
+nav a.current-page:hover::after, nav a.current-page:focus::after {
   -webkit-transform: scaleX(1.2);
           transform: scaleX(1.2);
 }
