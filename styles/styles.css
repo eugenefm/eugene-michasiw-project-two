@@ -999,6 +999,9 @@ li {
     border: 10px solid #08fded;
     width: 100%;
   }
+  .blog .comment {
+    margin: 0 20px 50px;
+  }
   .menu span {
     text-transform: none;
     opacity: 1;
