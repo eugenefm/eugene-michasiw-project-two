@@ -1,25 +1,10 @@
-.wrapper {
-  width: calc(100% - 2 * #{$wrapper});
-  max-width: 1440px;
-  margin: 0 auto;
-}
-header {
-  max-height: 600px;
-  min-height: 500px;
-  height: 70vh;
-}
-.menu input, 
-.menu label, 
-.menu span {
-  display: none;
-}
-
 // Home Page
 header.home {
   background: url("./../images/home-header.jpg") 50% 50% / cover;
   max-height: 700px;
   height: auto;
 }
+
 .title {
   display: flex;
   justify-content: space-between;
@@ -34,9 +19,11 @@ header.home {
     transform: translate($max-wrapper, 100px);
   }
 }
+
 section {
   padding: 150px 0;
 }
+
 .outer-flex {
   display: flex;
   justify-content: space-between;
@@ -82,11 +69,12 @@ section {
       flex: 1 1 500px;
     }
   }
+
   img {
     display: block;
   }
 
-  .image1 {
+  .image-1 {
     transform: translate(-$max-wrapper, -30px);
 
     img {
@@ -94,7 +82,7 @@ section {
     }
   }
 
-  .image2 {
+  .image-2 {
     transform: translate($max-wrapper, 30px);
     order: 1;
     align-self: flex-end;
@@ -102,7 +90,7 @@ section {
       box-shadow: -20px 20px $aqua;
     }
   }
-  .text1 {
+  .text-1 {
     padding-left: $max-wrapper;
   }
 
@@ -111,6 +99,7 @@ section {
     text-align: right;
   }
 }
+
 .one-column {
   text-align: center;
 
@@ -121,11 +110,13 @@ section {
     margin: 20px auto;
   }
 }
+
 .divider {
   height: 400px;
   background: url("./../images/banner.jpg") 50% 50% / cover;
 }
 .events {
+
   .wrapper {
     display: flex;
     flex-wrap: wrap;
@@ -151,6 +142,7 @@ section {
     flex: 2 1 667px;
   }
 }
+
 .gallery {
   background: $purple;
 
@@ -197,14 +189,16 @@ article, .contact {
   flex: 2 1 650px;
 }
 
-// Begin blog section
+// Blog Page
 .blog {
   header {
     background: url("./../images/blog-header.jpg") 50% 50% / cover;
   }
+
   .main-blog {
     max-width: 1600px;;
   }
+
   aside {
     margin-right: 5%;
 
@@ -212,25 +206,35 @@ article, .contact {
     box-shadow: 40px 20px 0 -20px $purple;
     width: calc(100% - 20px)
     }
+
     div {
       padding: 20px;
       background: $purple;
       margin-left: $max-wrapper;
     }
+
     h4 {
       margin-top: 2rem;
+      margin-bottom: .5rem;
+    }
+
+    p {
+      margin-top: 0;
     }
   }
+
   article {
+    img, div {
+      width: calc(100% - 20px);
+    }
+
     img {
       box-shadow: -20px 20px $aqua;
-      width: calc(100% - 20px);
       margin-left: auto;
     }
 
     div {
     border: 5px solid $aqua;
-    width: calc(100% - 20px);
     padding: $max-wrapper;
     }
   }
@@ -241,6 +245,7 @@ article, .contact {
       margin: 50px $max-wrapper 20px;
     }
   }
+
   .comment { 
     display: flex;
     align-items: flex-start;
@@ -251,6 +256,7 @@ article, .contact {
       padding-right: 20px;
     }
   }
+
   form {
     margin-bottom: 100px;
   }

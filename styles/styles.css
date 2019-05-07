@@ -227,6 +227,10 @@ h3 {
   font-size: 2.25rem;
 }
 
+h4 {
+  font-size: 1.25rem;
+}
+
 h5 {
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
@@ -244,6 +248,18 @@ button, a.button {
 
 button:hover, a.button:hover {
   background-color: #019e94;
+}
+
+.wrapper {
+  width: calc(100% - 2 * 5vw);
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+header {
+  max-height: 600px;
+  min-height: 500px;
+  height: 70vh;
 }
 
 form {
@@ -307,6 +323,12 @@ form ::placeholder {
 img {
   width: 100%;
   display: block;
+}
+
+.menu input,
+.menu label,
+.menu span {
+  display: none;
 }
 
 .menu {
@@ -381,6 +403,10 @@ main ul li::before {
   width: 1rem;
 }
 
+main ul a:hover {
+  color: #cccccc;
+}
+
 main .social {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -397,24 +423,6 @@ main .social li {
 }
 
 main .social li::before {
-  display: none;
-}
-
-.wrapper {
-  width: calc(100% - 2 * 5vw);
-  max-width: 1440px;
-  margin: 0 auto;
-}
-
-header {
-  max-height: 600px;
-  min-height: 500px;
-  height: 70vh;
-}
-
-.menu input,
-.menu label,
-.menu span {
   display: none;
 }
 
@@ -525,17 +533,17 @@ section {
   display: block;
 }
 
-.quadrant .image1 {
+.quadrant .image-1 {
   -webkit-transform: translate(-80px, -30px);
           transform: translate(-80px, -30px);
 }
 
-.quadrant .image1 img {
+.quadrant .image-1 img {
   -webkit-box-shadow: 20px 20px #08fded;
           box-shadow: 20px 20px #08fded;
 }
 
-.quadrant .image2 {
+.quadrant .image-2 {
   -webkit-transform: translate(80px, 30px);
           transform: translate(80px, 30px);
   -webkit-box-ordinal-group: 2;
@@ -545,12 +553,12 @@ section {
       align-self: flex-end;
 }
 
-.quadrant .image2 img {
+.quadrant .image-2 img {
   -webkit-box-shadow: -20px 20px #08fded;
           box-shadow: -20px 20px #08fded;
 }
 
-.quadrant .text1 {
+.quadrant .text-1 {
   padding-left: 80px;
 }
 
@@ -695,18 +703,25 @@ article, .contact {
 
 .blog aside h4 {
   margin-top: 2rem;
+  margin-bottom: .5rem;
+}
+
+.blog aside p {
+  margin-top: 0;
+}
+
+.blog article img, .blog article div {
+  width: calc(100% - 20px);
 }
 
 .blog article img {
   -webkit-box-shadow: -20px 20px #08fded;
           box-shadow: -20px 20px #08fded;
-  width: calc(100% - 20px);
   margin-left: auto;
 }
 
 .blog article div {
   border: 5px solid #08fded;
-  width: calc(100% - 20px);
   padding: 80px;
 }
 
@@ -775,18 +790,18 @@ article, .contact {
     -webkit-transform: translate(5vw, 100px);
             transform: translate(5vw, 100px);
   }
-  .quadrant .image1 {
+  .quadrant .image-1 {
     -webkit-transform: translate(-5vw, -30px);
             transform: translate(-5vw, -30px);
   }
-  .quadrant .image2 {
+  .quadrant .image-2 {
     -webkit-transform: translate(5vw, 30px);
             transform: translate(5vw, 30px);
   }
-  .quadrant .text1 {
+  .quadrant .text-1 {
     padding-left: 5vw;
   }
-  .quadrant .text2 {
+  .quadrant .text-2 {
     padding-right: 5vw;
   }
   .blog aside div {
@@ -836,12 +851,12 @@ article, .contact {
   .features {
     padding: 150px 0;
   }
-  .quadrant .image1 {
+  .quadrant .image-1 {
     -webkit-transform: translate(-10px, -5vw);
             transform: translate(-10px, -5vw);
     margin: 0 auto;
   }
-  .quadrant .image2 {
+  .quadrant .image-2 {
     -webkit-transform: translate(10px, 5vw);
             transform: translate(10px, 5vw);
     margin: 0 auto;
@@ -850,7 +865,7 @@ article, .contact {
     margin: 0 auto;
     max-width: 500px;
   }
-  .quadrant .text1, .quadrant .text2 {
+  .quadrant .text-1, .quadrant .text-2 {
     padding: 20px 0;
     text-align: center;
   }

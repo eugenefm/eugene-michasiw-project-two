@@ -21,18 +21,18 @@
   }
   .quadrant {
     
-    .image1 {
+    .image-1 {
     transform: translate(-$wrapper, -30px);
     }
 
-    .image2 {
+    .image-2 {
     transform: translate($wrapper, 30px);
     }
-    .text1 {
+    .text-1 {
       padding-left: $wrapper;
     }
 
-    .text2 {
+    .text-2 {
       padding-right: $wrapper;
     }
   }
@@ -40,6 +40,7 @@
     aside div {
     margin-left: $wrapper;
     }
+
     article div {
       padding: $wrapper;
     }
@@ -47,14 +48,18 @@
   .comments h2 { 
       margin: 50px $wrapper 20px;
   }
+
   .comment {
       margin: 0 $wrapper 50px;
   }
+
   .contact {
+
     section {
       transform: translate(calc(#{$wrapper} - 20px));
     }
   }
+
   form {
     margin: 0 calc(#{$wrapper} - 20px);
   }
@@ -64,14 +69,17 @@
     width: calc(100% - 20px);
     margin: 0 auto;
   }
+
   h1 {
     font-size: 5rem;
   }
+
   .home {
     h1 {
       font-size: 15vw;
       text-align: center;
     }
+
     .right {
       flex-basis: 100%;
 
@@ -83,31 +91,38 @@
       }
     }
   }
+
   .features {
     padding: 150px 0;
   }
+
   .quadrant {
-    .image1 {
+    .image-1 {
       transform: translate( -10px , -$wrapper);
       margin: 0 auto;
     }
-    .image2 {
+
+    .image-2 {
       transform: translate(10px , $wrapper);
       margin: 0 auto;
     }
+
     img {
       margin: 0 auto;
       max-width: 500px;
     }
-    .text1, .text2 {
+
+    .text-1, .text-2 {
       padding: 20px 0;
       text-align: center;
 
     }
   }
+
   section {
     padding: 75px 0;
   }
+
   .events {
 
     .left {
@@ -116,13 +131,16 @@
     }
   }
   .gallery .wrapper {
+
     div:nth-of-type(2) {
       margin: 0;
     }
+
     div:nth-of-type(3) {
       display: none;
     }
   }
+
   .main-contact, .main-blog {
     flex-direction: column;
 
@@ -130,7 +148,9 @@
       order: 1;
     }
   }
+
   .blog {
+
     article {
       width: 90%;
       margin: 0 auto;
@@ -140,12 +160,14 @@
         max-width: 500px;
         transform: translateX(10px);
       }
+
       div {
         border: 5px solid $aqua;
         padding-top: 100px;
         margin-top: -50px;
       }
     }
+
     aside {
       background: $purple;
       width: 90%;
@@ -163,17 +185,21 @@
         }
     }
   }
+
   .contact {
+
     section {
       transform: translate(-10px);
       width: calc(100% - 20px);
       margin: 100px auto 0;
     }
+
     aside {
       text-align: center;
       margin: 75px auto 0;
     }
   }
+
   main {
     .social
       li {
@@ -185,6 +211,7 @@
   h1 {
     font-size: 3.5rem;
   }
+
   form {
     display: block;
     padding: 0 20px;
@@ -227,11 +254,15 @@
   .outer-flex {
     margin: 0;
   }
+
   .blog {
+
     .main-blog {
       margin: -100px auto 0;
     }
+
     article {
+
       img {
         transform: translateX(0);
         box-shadow: none;
@@ -272,9 +303,11 @@
       background: $white;
       transition: 0.5s;
       border-radius: 2px;
+
       &:first-child {
         top: 2px;
       }
+
       &:last-child {
         top: 18px;
       }
@@ -286,18 +319,22 @@
         cursor: pointer;
       }
     }
+
     input:checked + label span {
       opacity: 0;
       top: 50%;
     }
+
     input:checked + label span:first-child {
       opacity: 1;
       transform: rotate(225deg);
     }
+
     input:checked + label span:last-child {
       opacity: 1;
       transform: rotate(-225deg);
     }
+
     nav {
       background: $purple;
       position: absolute;

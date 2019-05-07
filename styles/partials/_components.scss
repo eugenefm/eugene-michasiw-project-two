@@ -4,6 +4,8 @@ html {
 body {
   background: $green;
 }
+
+// Fonts
 h1, h2, h3, h4, h5 {
   color: $white;
   margin: 0;
@@ -44,10 +46,16 @@ h3 {
   font-size: rem(45px);
 }
 
+h4 {
+  font-size: rem(25px);
+}
+
 h5 {
   font-family: $body-font;
   font-size: rem(20px);
 }
+
+// Buttons
 button, a.button {
   font-family: $heading-font;
   background-color: $aqua;
@@ -62,6 +70,21 @@ button, a.button {
   }
 }
 
+// Wrapper
+.wrapper {
+  width: calc(100% - 2 * #{$wrapper});
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+// Header
+header {
+  max-height: 600px;
+  min-height: 500px;
+  height: 70vh;
+}
+
+// Forms
 form {
   display: flex;
   align-items: flex-start;
@@ -78,16 +101,19 @@ form {
       border: none;
       border-bottom: 3px solid $aqua;
     }
+
     textarea, button {
       flex-basis: 100%;
       margin: 20px;
     }
+
     textarea {
       background: none;
       color: $white;
       padding: 20px;
       border: 3px solid $aqua;;
     }
+
   ::placeholder {
     color: $white;
     opacity: 1;
@@ -98,9 +124,19 @@ img {
   width: 100%;
   display: block;
 }
+
+
+// Navigation
+.menu input, 
+.menu label, 
+.menu span {
+  display: none;
+}
+
 .menu {
   padding-top: 75px;
 }
+
 nav {
   width: 100%;
   max-width: 380px;
@@ -114,6 +150,7 @@ nav {
 
   }
   li {
+
     &::after {
     display:block;
     content: '';
@@ -121,23 +158,30 @@ nav {
     transform: scaleX(0);  
     transition: transform .1s ease-out;
     }
+
     &:hover::after {
         transform: scaleX(1);
     }
+
     &.current-page {
+
       &::after {
         display:block;
         content: '';
         border-bottom: solid 3px $aqua;  
         transform: scaleX(1);
       }
+
       &:hover::after {
         transform: scaleX(1.2);
       }
     }
   }
 }
+
+// Lists
 main {
+  
   ul {
   list-style: none; /* Remove default bullets */
   color: $white;
@@ -156,7 +200,12 @@ main {
     margin-left: -1rem;
     width: 1rem;
     }
+
+    a:hover {
+      color: darken($white, 20%)
+    }
   }
+
   .social {
     display: flex;
     padding: 0;
