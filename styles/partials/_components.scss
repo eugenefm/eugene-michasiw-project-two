@@ -127,6 +127,22 @@ img {
 
 
 // Navigation
+.skip-link {
+  position: absolute;
+  left: -1000px;
+  top: 5px;
+  z-index: 999;
+  background: white;
+  border: solid 1px red;
+  color: black;
+  padding: 20px;
+}
+
+.skip-link:focus {
+  left: 10px;
+  top: 10px;
+}
+
 .menu input, 
 .menu label, 
 .menu span {
@@ -181,7 +197,7 @@ nav {
 
 // Lists
 main {
-  
+
   ul {
   list-style: none; /* Remove default bullets */
   color: $white;
